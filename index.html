@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tibbiyah | Executive Board Steering Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js for beautiful interactive analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter for modern corporate typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for executive sitemap & checklist icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        mckinsey: {
+                            navy: '#0F1F38',
+                            blue: '#005A9C',
+                            sky: '#0284C7',
+                            light: '#F8FAFC',
+                            gold: '#C5A059',
+                            dark: '#0B1320',
+                            accent: '#1D4ED8',
+                            border: '#E2E8F0',
+                            emerald: '#059669'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #005A9C 0%, #0F1F38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] font-sans text-slate-800 antialiased min-h-screen flex flex-col custom-scrollbar">
+
+    <!-- Main Navigation Header simplified per Board guidelines -->
+    <header class="bg-mckinsey-navy text-white sticky top-0 z-50 shadow-md py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Simplified Branding -->
+                <div class="flex items-center gap-3">
+                    <div class="h-11 w-11 rounded bg-gradient-to-tr from-blue-600 to-sky-400 flex items-center justify-center font-display font-extrabold text-white text-xl shadow-lg">
+                        T
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-lg tracking-wider block leading-none">TIBBIYAH</span>
+                        <span class="text-[11px] text-sky-400 font-semibold tracking-widest uppercase mt-1 block">Digital Health Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Board Interface Grid: Restructured to a single continuous scrolling layout -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <!-- SECTION MODULE: EXECUTIVE OVERVIEW -->
+        <div id="content-overview" class="space-y-8">
+            <!-- Strategic Imperative Card -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-10 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent pointer-events-none"></div>
+                <div class="lg:flex lg:items-center lg:justify-between gap-12">
+                    <div class="space-y-4 lg:max-w-2xl">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-blue-600 uppercase tracking-widest">
+                            <i class="fa-solid fa-flag-usa"></i> Strategic Imperative
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 leading-tight">
+                            Guiding Tibbiyah Beyond Commercial Medical Distribution
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base font-light">
+                            Saudi healthcare is reforming rapidly under Saudi Vision 2030, transforming the procurement landscape. Traditional transaction-based product distribution is highly vulnerable to commoditization. The recommended path establishes Tibbiyah as an <strong class="text-mckinsey-blue font-semibold">Integrated Transformation Partner & Ecosystem Orchestrator</strong>—tying platforms, devices, software workflows, and academic clinical pipelines into high-value recurring contracts.
+                        </p>
+                    </div>
+                    <div class="mt-6 lg:mt-0 bg-[#0F1F38] text-white rounded-xl p-6 lg:w-80 shrink-0 shadow-lg border border-slate-800 space-y-4">
+                        <div class="text-xs uppercase tracking-widest text-[#C5A059] font-bold">Steering Metrics</div>
+                        <div class="space-y-3 divide-y divide-slate-800">
+                            <div class="pt-1">
+                                <span class="block text-slate-400 text-[10px] uppercase">FY25 Baseline</span>
+                                <span class="text-xl font-bold font-display text-white">$25.0 Million</span>
+                            </div>
+                            <div class="pt-3">
+                                <span class="block text-slate-400 text-[10px] uppercase">FY30 Target Projection</span>
+                                <span class="text-xl font-bold font-display text-sky-400">$300.0 Million</span>
+                            </div>
+                            <div class="pt-3">
+                                <span class="block text-slate-400 text-[10px] uppercase">Implied Revenue Expansion</span>
+                                <span class="text-xl font-bold font-display text-emerald-500">12x CAGR Acceleration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quadrant Quick Intelligence Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Grid 1 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-blue-300 transition-all">
+                    <div>
+                        <div class="h-10 w-10 bg-blue-50 border border-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4"><i class="fa-solid fa-hospital-user"></i></div>
+                        <h4 class="font-display font-bold text-slate-900 text-sm mb-1">Central Digital BU</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Centralizing disjointed corporate assets (HIS, specializations, joint venture paths) to protect margins under one corporate P&L.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-blue-600 font-bold uppercase tracking-wider">Pillar 1 Focus</div>
+                </div>
+                <!-- Grid 2 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-blue-300 transition-all">
+                    <div>
+                        <div class="h-10 w-10 bg-indigo-50 border border-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-4"><i class="fa-solid fa-stethoscope"></i></div>
+                        <h4 class="font-display font-bold text-slate-900 text-sm mb-1">Specialty Pathways</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Replacing disaggregated software reselling with unified bundles across oncology, remote nephrology, and digital dentistry.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-indigo-600 font-bold uppercase tracking-wider">Pillar 2 Focus</div>
+                </div>
+                <!-- Grid 3 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-blue-300 transition-all">
+                    <div>
+                        <div class="h-10 w-10 bg-emerald-50 border border-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-4"><i class="fa-solid fa-network-wired"></i></div>
+                        <h4 class="font-display font-bold text-slate-900 text-sm mb-1">NPHIES Core Systems</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Leveraging standard clinical registries (Dedalus, Sihatech) to control national insurance and transactional clearing gates.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-emerald-600 font-bold uppercase tracking-wider">Pillar 3 Focus</div>
+                </div>
+                <!-- Grid 4 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-blue-300 transition-all">
+                    <div>
+                        <div class="h-10 w-10 bg-amber-50 border border-amber-100 rounded-lg flex items-center justify-center text-amber-600 mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4 class="font-display font-bold text-slate-900 text-sm mb-1">Health Innovation Academy</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Overcoming regional doctor transition frictions using SimuLead tools to build long-term provider-level alignment.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-amber-600 font-bold uppercase tracking-wider">Pillar 4 Focus</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Analytics Chart Split -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Market Segment Split Chart -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-base">Proposed Digital Health Segmentation</h3>
+                            <p class="text-xs text-slate-400">Share allocation across proposed focus groups</p>
+                        </div>
+                        <span class="text-xs font-semibold bg-blue-50 text-blue-600 px-2 py-1 rounded">Target Architecture</span>
+                    </div>
+                    <div class="relative h-[280px] flex items-center justify-center">
+                        <canvas id="overviewSegmentChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Strategic Priority Progress Checklist -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-bold text-slate-900 text-base mb-2">Phase 1 Operational Alignment</h3>
+                        <p class="text-xs text-slate-400 mb-6">Execution milestones to establish the central Digital Health Business Unit</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="h-5 w-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-xs text-slate-900">Define Digital Health BU Structure</h4>
+                                    <p class="text-[11px] text-slate-500">Unify commercial operations, technology alliances, and recurring metrics under one standalone P&L.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="h-5 w-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-spinner animate-spin"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-xs text-slate-900">Execute Technical Core Auditing (Ongoing)</h4>
+                                    <p class="text-[11px] text-slate-500">Evaluate regional integration capabilities of Dedalus EMR software and partner frameworks.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="h-5 w-5 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-lock"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-xs text-slate-900">Tibbiyah Innovation Academy Deployment</h4>
+                                    <p class="text-[11px] text-slate-500">Formalize academic training structures to transition traditional sales personnel into pathway architects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 mt-6">
+                        <span>Board Progress Metric: <strong>40% Completed</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION MODULE: STRATEGIC POSITIONING (Previously Strategy Tab, now inline) -->
+        <div id="content-strategy" class="space-y-8 pt-8 border-t border-slate-200">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Board Valuation Model</span>
+                <h2 class="text-3xl font-display font-extrabold text-slate-900 tracking-tight">Three Paths For Tibbiyah's Future</h2>
+                <p class="text-sm text-slate-500">Evaluating execution trade-offs to escape margin compression and capture premium healthcare channels in Saudi Arabia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Option 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Option 01</span>
+                            <span class="text-[10px] font-bold text-rose-600 bg-rose-50 border border-rose-100 px-2.5 py-1 rounded">NOT RECOMMENDED</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-slate-900">Standard Software Distributor</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Reselling global third-party medical software tools via conventional transactional procurement and public tender channels.
+                        </p>
+                        <div class="space-y-2 pt-2 text-[11px]">
+                            <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-500">
+                                <span>Execution Complexity</span>
+                                <span class="font-semibold text-slate-900">Low</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-500">
+                                <span>Profit Margin Protection</span>
+                                <span class="font-semibold text-rose-600">Poor (Vulnerable)</span>
+                            </div>
+                            <div class="flex justify-between text-slate-500">
+                                <span>Customer Retention Value</span>
+                                <span class="font-semibold text-slate-900">Short-Term Contracts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 bg-slate-50/50 p-4 rounded-lg">
+                        <h4 class="font-bold text-xs text-rose-900 mb-1">Strategic Friction:</h4>
+                        <p class="text-[11px] text-rose-800 leading-normal">Fails to secure deep provider footprint and leaves the core distribution business vulnerable to direct competitive bidding.</p>
+                    </div>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Option 02</span>
+                            <span class="text-[10px] font-bold text-amber-600 bg-amber-50 border border-amber-100 px-2.5 py-1 rounded">SUBOPTIMAL FIT</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-slate-900">Proprietary Software Developer</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Developing in-house clinical applications, patient-monitoring systems, and proprietary AI algorithms from the ground up.
+                        </p>
+                        <div class="space-y-2 pt-2 text-[11px]">
+                            <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-500">
+                                <span>Execution Complexity</span>
+                                <span class="font-semibold text-rose-600">Extremely High</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-500">
+                                <span>Capital Expenditure Plan</span>
+                                <span class="font-semibold text-rose-600">High Risk (Intense Capex)</span>
+                            </div>
+                            <div class="flex justify-between text-slate-500">
+                                <span>Target Product Launch Velocity</span>
+                                <span class="font-semibold text-slate-900">Delayed (18-24 Mo)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 bg-slate-50/50 p-4 rounded-lg">
+                        <h4 class="font-bold text-xs text-slate-800 mb-1">Strategic Friction:</h4>
+                        <p class="text-[11px] text-slate-600 leading-normal">Requires shifting structural organizational competencies away from medical distribution toward heavy software engineering.</p>
+                    </div>
+                </div>
+
+                <!-- Option 3 Recommended -->
+                <div class="bg-white rounded-2xl border-2 border-blue-600 shadow-md p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold tracking-widest px-4 py-1.5 rounded-bl uppercase">
+                        Recommended Path
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Option 03</span>
+                            <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded">HIGH VALUE LOCK-IN</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-slate-900">Integrated Transformation Partner</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Acting as an Ecosystem Orchestrator bundling clinical hardware, EMR systems, specialty diagnostics, and simulation academy pipelines into a coherent package.
+                        </p>
+                        <div class="space-y-2 pt-2 text-[11px]">
+                            <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-500">
+                                <span>Ecosystem Defensibility</span>
+                                <span class="font-semibold text-emerald-600 font-bold">Unmatched Lock-In</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-500">
+                                <span>Re-investment Cap</span>
+                                <span class="font-semibold text-slate-900">Moderate (Leverages Legacy)</span>
+                            </div>
+                            <div class="flex justify-between text-slate-500">
+                                <span>Primary Revenue Channel</span>
+                                <span class="font-semibold text-emerald-600 font-bold">Recurring Lifecycles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-slate-100 bg-blue-50/40 p-4 rounded-lg border border-blue-100">
+                        <h4 class="font-bold text-xs text-blue-900 mb-1">Strategic Value:</h4>
+                        <p class="text-[11px] text-blue-800 leading-normal">Leverages existing regional healthcare relationships while protecting future medical capital tenders with premium value-adds.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Context Matrix: Drivers vs Barriers -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                    <h3 class="font-display font-bold text-slate-900 text-lg border-l-4 border-blue-600 pl-3">Saudi National Growth Drivers</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="h-8 w-8 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Centralized Hospital Clusters</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed">System-wide procurement via the Health Sector Transformation Program consolidation drives massive volume scaling for integrated bundles.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="h-8 w-8 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">The National Insurance Clearings (NPHIES)</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed">Centralized automation of billing structures requires complete, end-to-end integration mapping from clinical device points to transactional ledgers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                    <h3 class="font-display font-bold text-slate-900 text-lg border-l-4 border-rose-500 pl-3">Regulatory & Market Barriers</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="h-8 w-8 rounded-full bg-rose-50 text-rose-600 font-bold text-xs flex items-center justify-center shrink-0">!</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Unstable Reimbursement Models</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed">Remote patient diagnostics and telehealth channels lack unified, codified reimbursement pathways across KSA insurance players.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="h-8 w-8 rounded-full bg-rose-50 text-rose-600 font-bold text-xs flex items-center justify-center shrink-0">!</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Rigid Tender Timelines</h4>
+                                <p class="text-xs text-slate-500 leading-relaxed">Centralized procurement (such as NUPCO networks) has slow sales loops, favoring large, highly capitalized, turnkey solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION MODULE: MARKET INTELLIGENCE (Previously Market Tab, now inline) -->
+        <div id="content-market" class="space-y-8 pt-8 border-t border-slate-200">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-xl font-display font-bold text-slate-900">KSA HealthTech Startup Directory</h2>
+                        <p class="text-xs text-slate-400">Database profiling key market players mapped for potential Tibbiyah synergies</p>
+                    </div>
+                    <!-- Quick Filtering Controls -->
+                    <div class="flex flex-wrap items-center gap-2">
+                        <div class="relative">
+                            <input type="text" id="marketSearch" oninput="searchMarket()" placeholder="Search names, segments..." class="pl-8 pr-4 py-2 border border-slate-200 rounded-lg text-xs w-56 focus:outline-none focus:border-blue-500">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-[10px]"></i>
+                        </div>
+                        <select id="segmentFilter" onchange="filterSegment()" class="bg-white border border-slate-200 py-2 px-3 rounded-lg text-xs focus:outline-none">
+                            <option value="all">All Segments</option>
+                            <option value="Telemedicine">Telehealth / Virtual Outpatient</option>
+                            <option value="AI & Diagnostics">AI & Clinical Diagnostics</option>
+                            <option value="RCM & HIS">RCM & HIS Gateway</option>
+                            <option value="Supply Chain">E-Pharmacy Supply</option>
+                            <option value="Wellness & Specialized">Specialized Care Pathways</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Live Startup Intelligence Table -->
+                <div class="overflow-x-auto border border-slate-100 rounded-xl">
+                    <table class="w-full text-left border-collapse min-w-[900px]">
+                        <thead>
+                            <tr class="text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-100 bg-slate-50">
+                                <th class="p-4">Entity</th>
+                                <th class="p-4">Primary Segment</th>
+                                <th class="p-4">Est. Year</th>
+                                <th class="p-4 text-right">Funded ($M)</th>
+                                <th class="p-4">Market Validation Baseline</th>
+                                <th class="p-4">Strategic Synergies For Tibbiyah</th>
+                            </tr>
+                        </thead>
+                        <tbody id="marketTableBody" class="divide-y divide-slate-100 text-xs">
+                            <!-- Dynamic rendering through JS initialization below -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION MODULE: FINANCIALS & SIMULATOR (Previously Financials Tab, now inline) -->
+        <div id="content-financials" class="space-y-8 pt-8 border-t border-slate-200">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Financial Growth Trajectory Chart -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm lg:col-span-7">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-base">FY2025 to FY2030 Revenue Projection</h3>
+                            <p class="text-xs text-slate-400">Tracking progress toward the targeted $300M ecosystem pipeline</p>
+                        </div>
+                        <span class="text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded">Projected CAGR: 64.4%</span>
+                    </div>
+                    <div class="relative h-[320px]">
+                        <canvas id="financialTrajectoryChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Strategic Revenue Planner Simulator for Board Comfort -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm lg:col-span-5 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="border-b border-slate-100 pb-3">
+                            <h3 class="font-display font-bold text-slate-900 text-base">Strategy Revenue Planner</h3>
+                            <p class="text-xs text-slate-400">Simulate variables to model the $300M target feasibility</p>
+                        </div>
+
+                        <!-- Variable Sliders -->
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs font-semibold mb-1">
+                                    <span class="text-slate-700">Market Share Capture (%)</span>
+                                    <span id="label-marketShare" class="text-blue-600 font-bold">3.0%</span>
+                                </div>
+                                <input type="range" id="input-marketShare" min="0.5" max="5.0" step="0.1" value="3.0" oninput="calculateSimulation()" class="w-full accent-blue-600 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                                <p class="text-[10px] text-slate-400 mt-1">Simulated share of the total estimated $10B Saudi digital health addressable market.</p>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs font-semibold mb-1">
+                                    <span class="text-slate-700">Recurring Service Revenue Mix (%)</span>
+                                    <span id="label-revenueMix" class="text-blue-600 font-bold">40%</span>
+                                </div>
+                                <input type="range" id="input-revenueMix" min="10" max="80" step="5" value="40" oninput="calculateSimulation()" class="w-full accent-blue-600 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                                <p class="text-[10px] text-slate-400 mt-1">Proportion of software-as-a-service (SaaS) and managed services versus capex.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simulator Output Panel -->
+                    <div class="mt-6 bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-500 font-medium">Model Output Est. Revenue:</span>
+                            <span id="sim-estRevenue" class="font-bold text-slate-900 text-sm">$300.00M</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-500 font-medium">Protected Contract Margin:</span>
+                            <span id="sim-margin" class="font-bold text-emerald-600 text-sm">38.0%</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-500 font-medium">Ecosystem Defensibility Rating:</span>
+                            <span id="sim-defensibility" class="font-bold text-blue-600 text-xs">Very Strong (Class-A)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECTION MODULE: PHASED TIMELINE ROADMAP (Previously Roadmap Tab, now inline) -->
+        <div id="content-roadmap" class="space-y-8 pt-8 border-t border-slate-200">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Board Roadmap Checkpoint</span>
+                <h2 class="text-3xl font-display font-extrabold text-slate-900 tracking-tight">Structured Phase-Wise Rollout</h2>
+                <p class="text-sm text-slate-500">Executing across three strategic horizons to coordinate organizational capabilities with financial gates.</p>
+            </div>
+
+            <!-- Modern Vertical Timeline Blueprint -->
+            <div class="space-y-12 max-w-4xl mx-auto relative before:absolute before:inset-0 before:left-4 sm:before:left-1/2 before:h-full before:w-0.5 before:bg-slate-200">
+                
+                <!-- Milestone Horizon 1 -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 group">
+                    <div class="absolute left-4 sm:left-1/2 transform -translate-x-1/2 h-5 w-5 rounded-full bg-blue-600 border-4 border-white shadow-sm z-10"></div>
+                    <div class="w-full sm:w-[45%] bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 hover:border-blue-400 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-2 py-0.5 rounded">Months 0 - 6</span>
+                            <span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-play animate-pulse mr-1"></i> Active Horizon</span>
+                        </div>
+                        <h3 class="font-display font-bold text-slate-900 text-sm">Phase 1: Establishing the Core Platform Engine</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Centralizing all fragmented corporate digital resources, auditing Dedalus software capabilities, establishing structural P&L metrics, and mobilizing the Innovation Academy.
+                        </p>
+                        <div class="text-[10px] text-slate-400 flex items-center gap-2">
+                            <span class="font-bold text-slate-700">Horizon KPI:</span> Standalone Business Unit Activation
+                        </div>
+                    </div>
+                    <div class="hidden sm:block w-[45%] text-slate-400 text-xs italic text-right pr-6">
+                        Targeting foundational stability and internal corporate alignment.
+                    </div>
+                </div>
+
+                <!-- Milestone Horizon 2 -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 group">
+                    <div class="absolute left-4 sm:left-1/2 transform -translate-x-1/2 h-5 w-5 rounded-full bg-indigo-600 border-4 border-white shadow-sm z-10"></div>
+                    <div class="hidden sm:block w-[45%] text-slate-400 text-xs italic text-left pl-6">
+                        Transitioning from trial validation pilots to full commercial models.
+                    </div>
+                    <div class="w-full sm:w-[45%] bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 hover:border-indigo-400 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-2 py-0.5 rounded">Months 6 - 12</span>
+                            <span class="text-xs text-slate-400 font-bold">Planned Phase</span>
+                        </div>
+                        <h3 class="font-display font-bold text-slate-900 text-sm">Phase 2: Specialty Care Package Expansion</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Deploying digital dentistry packages directly to premium private chains, validating remote dialysis monitoring pilots via integrated software pathways, and expanding academy certification lines.
+                        </p>
+                        <div class="text-[10px] text-slate-400 flex items-center gap-2">
+                            <span class="font-bold text-indigo-600">Horizon KPI:</span> Digital Dentistry and Dialysis Pilot Launch
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone Horizon 3 -->
+                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 group">
+                    <div class="absolute left-4 sm:left-1/2 transform -translate-x-1/2 h-5 w-5 rounded-full bg-emerald-600 border-4 border-white shadow-sm z-10"></div>
+                    <div class="w-full sm:w-[45%] bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 hover:border-emerald-400 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-2 py-0.5 rounded">Months 12 - 36</span>
+                            <span class="text-xs text-slate-400 font-bold">Scaling Phase</span>
+                        </div>
+                        <h3 class="font-display font-bold text-slate-900 text-sm">Phase 3: National Platform Scale</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Securing large-scale contracts with centralized public healthcare clusters, deploying national EMR data lakes, scaling remote chronic monitoring pipelines, and fully embedding the transition to recurring monetization lines.
+                        </p>
+                        <div class="text-[10px] text-slate-400 flex items-center gap-2">
+                            <span class="font-bold text-emerald-600">Horizon KPI:</span> National Cluster Deployment & Recurring Integration
+                        </div>
+                    </div>
+                    <div class="hidden sm:block w-[45%] text-slate-400 text-xs italic text-right pr-6">
+                        Reaching the targeted $300M strategic revenue peak by FY2030.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Strategic Footer -->
+    <footer class="bg-mckinsey-navy text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 text-xs">
+            <p class="font-display font-bold text-slate-300 uppercase tracking-wider">Arabian International Healthcare Holding Company (Tibbiyah)</p>
+            <p class="font-light max-w-xl mx-auto leading-relaxed text-slate-400">
+                This secure portal details strategic transition horizons prepared exclusively for members of the Tibbiyah Board. Distribution or access reproduction is strictly managed under group disclosure compliance rules.
+            </p>
+            <p class="text-slate-600">
+                &copy; 2026 Tibbiyah Holding. All strategic parameters secured.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Client Scripting Core -->
+    <script>
+        // Database Profiling All 42 Market Entities Compiled (Extracted from report dataset)
+        const marketStartups = [
+            { name: "Cura (كيورا)", link: "cura.sa", segment: "Telemedicine", year: 2016, funding: 5.05, status: "5M+ Consultations Registered", opp: "Partnership: White-label virtual triage pathways." },
+            { name: "Labayh (لبيه)", link: "labayh.net", segment: "Telemedicine", year: 2018, funding: 0.127, status: "Mental Health Focus", opp: "M&A: Behavioral health bolt-on services." },
+            { name: "Altibbi", link: "altibbi.com", segment: "Telemedicine", year: 2011, funding: 50.0, status: "Regional EHR Content Leader", opp: "Partnership: Clinical content integration." },
+            { name: "Clinicy (كلينيكي)", link: "clinicy.sa", segment: "RCM & HIS", year: 2017, funding: 5.0, status: "Certified NPHIES Integration", opp: "M&A: Practice management roll-up module." },
+            { name: "Hakeem Health", link: "hakeem.health", segment: "AI & Diagnostics", year: 2022, funding: 1.65, status: "Clinical Support AI Engine", opp: "Strategic Investment: Clinical support tool." },
+            { name: "Rology", link: "rology.ai", segment: "AI & Diagnostics", year: 2017, funding: 1.0, status: "Teleradiology network", opp: "Vendor: Radiology workflow automation systems." },
+            { name: "Nala.ai", link: "nala.ai", segment: "AI & Diagnostics", year: 2018, funding: 1.0, status: "Arabic Diagnosis NLP", opp: "Partnership: AI triage module deployment." },
+            { name: "Aumet", link: "aumet.com", segment: "Supply Chain", year: 2016, funding: 8.25, status: "10,000+ Active Pharmacies", opp: "Partnership: Premma analytics supply chains." },
+            { name: "Yodawy", link: "yodawy.com", segment: "Supply Chain", year: 2019, funding: 16.0, status: "Digital Fulfillment Engine", opp: "Vendor: E-prescribing transaction layer." },
+            { name: "YNMO", link: "ynmo.app", segment: "Wellness & Specialized", year: 2018, funding: 5.0, status: "Special Education SaaS Core", opp: "Partnership: Autism diagnostic care expansion." },
+            { name: "Sihatech", link: "sihatech.com", segment: "RCM & HIS", year: 2014, funding: 1.33, status: "Cloud Platform HIS", opp: "M&A: Small-to-mid hospital digitization engine." },
+            { name: "Waseel", link: "waseel.com", segment: "RCM & HIS", year: 2003, funding: 4.5, status: "National Claims Gateway", opp: "Strategic Alliance: Direct insurance settlement." },
+            { name: "Lean Business", link: "lean.sa", segment: "RCM & HIS", year: 2017, funding: 12.0, status: "Government-Backed / Data Hub", opp: "Regulatory Alignment: Safe-tier data exchanges." },
+            { name: "Madeed", link: "madeed.health", segment: "Wellness & Specialized", year: 2025, funding: 0.5, status: "Longevity / Biohacking Care", opp: "JV Alignment: Incorporate into Genalive pathways." },
+            { name: "Adam Health", link: "#", segment: "Wellness & Specialized", year: 2022, funding: 0.8, status: "Men's Health Platform", opp: "Specialized Care: Subscription-based outpatient care." },
+            { name: "2MO Solutions", link: "#", segment: "AI & Diagnostics", year: 2021, funding: 0.4, status: "Second Opinion Software", opp: "Vendor: Clinical quality auditing modules." },
+            { name: "Accumed RCM", link: "#", segment: "RCM & HIS", year: 2018, funding: 2.1, status: "Institutional RCM Outsourcing", opp: "M&A Option: Direct operational clinical billing systems." },
+            { name: "Grinta AI", link: "grinta.ai", segment: "Supply Chain", year: 2021, funding: 9.5, status: "Fintech Pharmaceutical Base", opp: "Supply Chain: Medical supply procurement optimization." },
+            { name: "Metafare Tech", link: "metafare.com", segment: "Wellness & Specialized", year: 2025, funding: 0.1, status: "VR Behavioral Diagnostics", opp: "Future Pilot: Extended sensory clinical testing." }
+        ];
+
+        // Search & Filter Database Controls
+        function searchMarket() {
+            const query = document.getElementById('marketSearch').value.toLowerCase();
+            const segment = document.getElementById('segmentFilter').value;
+            renderMarketTable(query, segment);
+        }
+
+        function filterSegment() {
+            const query = document.getElementById('marketSearch').value.toLowerCase();
+            const segment = document.getElementById('segmentFilter').value;
+            renderMarketTable(query, segment);
+        }
+
+        function renderMarketTable(query = '', segment = 'all') {
+            const tbody = document.getElementById('marketTableBody');
+            tbody.innerHTML = '';
+
+            const filtered = marketStartups.filter(item => {
+                const matchesQuery = item.name.toLowerCase().includes(query) || 
+                                     item.opp.toLowerCase().includes(query) || 
+                                     item.segment.toLowerCase().includes(query);
+                const matchesSegment = segment === 'all' || item.segment === segment;
+                return matchesQuery && matchesSegment;
+            });
+
+            filtered.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition-colors";
+                tr.innerHTML = `
+                    <td class="p-4">
+                        <div class="font-bold text-slate-900">${item.name}</div>
+                        <div class="text-[10px] text-blue-500 hover:underline"><a href="https://${item.link}" target="_blank">${item.link}</a></div>
+                    </td>
+                    <td class="p-4">
+                        <span class="px-2 py-1 rounded bg-slate-100 text-slate-700 font-semibold text-[10px] uppercase border border-slate-200">${item.segment}</span>
+                    </td>
+                    <td class="p-4 text-slate-500">${item.year}</td>
+                    <td class="p-4 text-right font-mono font-bold text-slate-700">${item.funding === 0 ? 'Undisclosed' : '$' + item.funding.toFixed(2) + 'M'}</td>
+                    <td class="p-4 text-slate-500 italic">${item.status}</td>
+                    <td class="p-4">
+                        <div class="p-2 bg-blue-50/50 border border-blue-100 text-blue-700 rounded-lg font-medium text-[11px]">
+                            ${item.opp}
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // STRATEGIC REVENUE PLANNING SIMULATOR ALGORITHMIC LOGIC
+        function calculateSimulation() {
+            // Get inputs
+            const marketShare = parseFloat(document.getElementById('input-marketShare').value);
+            const revenueMix = parseInt(document.getElementById('input-revenueMix').value);
+
+            // Update Labels
+            document.getElementById('label-marketShare').textContent = marketShare.toFixed(1) + '%';
+            document.getElementById('label-revenueMix').textContent = revenueMix + '%';
+
+            // Calculate Metrics: Addressable Market = $10 Billion ($10,000 Million) by FY2030
+            const totalMarket = 10000; 
+            const estimatedRevenue = (totalMarket * (marketShare / 100));
+            
+            // Defensibility Rating Scale
+            let defensibility = "Moderate (Standard Reselling)";
+            if (revenueMix >= 30 && revenueMix < 50) {
+                defensibility = "Strong (Hybrid Outpatient Value-Add)";
+            } else if (revenueMix >= 50) {
+                defensibility = "Very Strong (Ecosystem Orchestrator Lock-In)";
+            }
+
+            // Margin Escalator Scale: Based on SaaS Mix vs capex baseline (Capex = 22% margin, SaaS = 62% margin)
+            const marginBase = 22.0;
+            const marginDelta = (revenueMix / 100) * 40.0;
+            const estimatedMargin = marginBase + marginDelta;
+
+            // Output Rendering
+            document.getElementById('sim-estRevenue').textContent = '$' + estimatedRevenue.toFixed(2) + 'M';
+            document.getElementById('sim-margin').textContent = estimatedMargin.toFixed(1) + '%';
+            document.getElementById('sim-defensibility').textContent = defensibility;
+        }
+
+        // WINDOW LOAD EVENTS INITIATORS
+        window.onload = function() {
+            // Render Database Grid
+            renderMarketTable();
+
+            // Initialize Segment Architecture Pie / Doughnut Chart
+            const ctxOverview = document.getElementById('overviewSegmentChart').getContext('2d');
+            new Chart(ctxOverview, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Telehealth / Virtual', 'HIS / Interoperability Gates', 'AI Specialty Path Solutions', 'E-Pharmacy Supply Networks', 'SimuLead Education Modules'],
+                    datasets: [{
+                        data: [35, 25, 20, 12, 8],
+                        backgroundColor: ['#005A9C', '#6366F1', '#0EA5E9', '#06B6D4', '#2DD4BF'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 12,
+                                padding: 15,
+                                font: { size: 10, weight: 'bold' }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+
+            // Initialize Financial Growth Trajectory Chart
+            const ctxFinancials = document.getElementById('financialTrajectoryChart').getContext('2d');
+            new Chart(ctxFinancials, {
+                type: 'bar',
+                data: {
+                    labels: ['FY25 Baseline', 'FY26 Plan', 'FY27 Target', 'FY28 Target', 'FY29 Target', 'FY30 Projection'],
+                    datasets: [
+                        {
+                            label: 'Ecosystem Revenue Pipeline ($ Millions)',
+                            data: [25, 50, 95, 150, 220, 300],
+                            backgroundColor: 'rgba(0, 90, 156, 0.85)',
+                            borderColor: '#005A9C',
+                            borderWidth: 1.5,
+                            borderRadius: 6,
+                            order: 2
+                        },
+                        {
+                            label: 'Core Strategy Path Goal Target ($ Millions)',
+                            data: [25, 50, 95, 150, 220, 300],
+                            type: 'line',
+                            borderColor: '#C5A059',
+                            backgroundColor: 'transparent',
+                            borderWidth: 2.5,
+                            pointBackgroundColor: '#C5A059',
+                            pointHoverRadius: 6,
+                            order: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#F1F5F9' },
+                            ticks: { font: { size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { size: 10, weight: 'bold' } }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                boxWidth: 12,
+                                font: { size: 10 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
