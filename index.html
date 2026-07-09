@@ -580,7 +580,7 @@
                     <div class="space-y-4">
                         <div class="border-b border-slate-100 pb-3">
                             <h3 class="font-display font-bold text-slate-900 text-sm">Target Growth Feasibility Simulator</h3>
-                            <p class="text-xs text-slate-400">Simulate variables to model the target $300M revenue path (Slide 24)</p>
+                            <p class="text-xs text-slate-400">Simulate variables to model the target SAR 300M revenue path (Slide 24)</p>
                         </div>
 
                         <div class="space-y-4">
@@ -588,10 +588,10 @@
                             <div>
                                 <div class="flex justify-between text-xs font-semibold mb-1">
                                     <span class="text-slate-700">2030 Market Share Capture (%)</span>
-                                    <span id="val-marketShare" class="text-blue-600 font-bold">3.0%</span>
+                                    <span id="val-marketShare" class="text-blue-600 font-bold">0.8%</span>
                                 </div>
-                                <input type="range" id="slider-marketShare" min="0.5" max="5.0" step="0.1" value="3.0" oninput="calculateSimulator()" class="w-full accent-blue-600 h-1.5 bg-slate-200 rounded">
-                                <p class="text-[10px] text-slate-400 mt-1">Simulating market share against projected $10B KSA digital market size by 2030 (Slide 24).</p>
+                                <input type="range" id="slider-marketShare" min="0.1" max="5.0" step="0.1" value="0.8" oninput="calculateSimulator()" class="w-full accent-blue-600 h-1.5 bg-slate-200 rounded">
+                                <p class="text-[10px] text-slate-400 mt-1">Simulating market share against projected USD 10B (SAR 37.5B) KSA digital market size by 2030 (Slide 24).</p>
                             </div>
 
                             <!-- Slider 2 -->
@@ -610,7 +610,7 @@
                     <div class="mt-6 bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3 text-xs">
                         <div class="flex justify-between items-center">
                             <span class="text-slate-500 font-medium">Model Output Projected Revenue:</span>
-                            <span id="out-revenue" class="font-bold text-slate-900 text-sm">SAR 1,125M ($300M)</span>
+                            <span id="out-revenue" class="font-bold text-slate-900 text-sm">SAR 300M (USD 80M)</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-slate-500 font-medium">Ecosystem CAGR Growth Multiple:</span>
@@ -632,7 +632,7 @@
                     <div class="flex justify-between items-center mb-6">
                         <div>
                             <h3 class="font-display font-bold text-slate-900 text-sm">Tibbiyah Digital Revenue Roadmap (FY2025 - FY2030)</h3>
-                            <p class="text-xs text-slate-400">Visualizing targets against slide baselines ($ Millions)</p>
+                            <p class="text-xs text-slate-400">Visualizing targets against slide baselines (SAR Millions)</p>
                         </div>
                     </div>
                     <div class="relative h-[290px]">
@@ -891,39 +891,40 @@
             document.getElementById('val-marketShare').textContent = shareVal.toFixed(1) + "%";
             document.getElementById('val-positioningMix').textContent = mixVal + "%";
 
-            // Total addressable market = $10.0 Billion ($10,000 Million) by 2030 (Slide 18)
-            const projectedMarketSize = 10000;
-            const simulatedRev = projectedMarketSize * (shareVal / 100);
+            // Total addressable market = USD 10.0 Billion by 2030 (Slide 18)
+            // Evaluated in SAR, this translates to exactly SAR 37,500 Million
+            const projectedMarketSizeSAR = 37500;
+            const simulatedRevSAR = projectedMarketSizeSAR * (shareVal / 100);
 
             // Margin Escalator Scale logic based on mix percentage (Distribution baseline 22%, transformation mix scaling to 55%)
             const baseMargin = 22.0;
             const scalingFactor = (mixVal / 100) * 33.0;
             const calculatedMargin = baseMargin + scalingFactor;
 
-            // CAGR multiple calculation comparing base of $25M
-            const growthMultiple = simulatedRev / 25;
+            // CAGR multiple calculation comparing base of SAR 25M
+            const growthMultiple = simulatedRevSAR / 25;
 
             // Determine Defensibility status
             let defLabel = "Digital Reseller";
             if (mixVal >= 30 && mixVal < 60) defLabel = "Technical Integrator";
             else if (mixVal >= 60) defLabel = "Ecosystem Orchestrator";
 
-            // Output Rendering
-            document.getElementById('out-revenue').textContent = `SAR ${Math.round(simulatedRev * 3.75)}M ($${simulatedRev.toFixed(1)}M)`;
+            // Output Rendering in SAR primarily
+            document.getElementById('out-revenue').textContent = `SAR ${Math.round(simulatedRevSAR)}M (USD ${(simulatedRevSAR / 3.75).toFixed(1)}M)`;
             document.getElementById('out-growthMultiple').textContent = `${growthMultiple.toFixed(1)}x Scale`;
             document.getElementById('out-margins').textContent = `${calculatedMargin.toFixed(1)}% Margin`;
             document.getElementById('out-defensibility').textContent = defLabel;
 
             // Trigger visual bar graph scaling update
-            updateChartTrajectory(simulatedRev);
+            updateChartTrajectory(simulatedRevSAR);
         }
 
-        function updateChartTrajectory(finalVal) {
+        function updateChartTrajectory(finalValSAR) {
             if (!digitalTrajectoryChartInstance) return;
 
-            // Reconstruct interpolation points from baseline $25M to calculated final target
-            const delta = (finalVal - 25) / 5;
-            const dataPath = [25, Math.round(25 + delta), Math.round(25 + delta * 2), Math.round(25 + delta * 3), Math.round(25 + delta * 4), Math.round(finalVal)];
+            // Reconstruct interpolation points from baseline SAR 25M to calculated final target
+            const delta = (finalValSAR - 25) / 5;
+            const dataPath = [25, Math.round(25 + delta), Math.round(25 + delta * 2), Math.round(25 + delta * 3), Math.round(25 + delta * 4), Math.round(finalValSAR)];
 
             digitalTrajectoryChartInstance.data.datasets[0].data = dataPath;
             digitalTrajectoryChartInstance.data.datasets[1].data = dataPath;
@@ -1018,7 +1019,7 @@
                     labels: ['FY25 Base', 'FY26 Plan', 'FY27 Target', 'FY28 Target', 'FY29 Target', 'FY30 projection'],
                     datasets: [
                         {
-                            label: 'Simulated Ecosystem Revenue ($ Millions)',
+                            label: 'Simulated Ecosystem Revenue (SAR Millions)',
                             data: [25, 80, 135, 190, 245, 300],
                             backgroundColor: 'rgba(0, 90, 156, 0.85)',
                             borderColor: '#005A9C',
